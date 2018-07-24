@@ -17,9 +17,7 @@ script:
   - npm run test
   - cd client
   - npm run test
-  - npm run lint
-  - cd client
-  - npm run test
+  - cd ..
 deploy:
   provider: heroku
   api_key:
