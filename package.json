@@ -2,7 +2,7 @@
   "name": "lendit",
   "version": "1.0.0",
   "engines": {
-    "node":"8"
+    "node": "8"
   },
   "description": "",
   "main": "index.js",
