@@ -7,7 +7,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.get('/api/hello', (req, res) =>{
-    res.json("Please travis pls");
+    res.json("this is another test");
     console.log("Sent begging");
 });
 
