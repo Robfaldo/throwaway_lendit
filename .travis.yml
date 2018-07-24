@@ -16,6 +16,7 @@ script:
   - sleep 3
   - npm run test
   - cd client
+  - npm install
   - npm run test
 deploy:
   provider: heroku
