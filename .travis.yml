@@ -11,13 +11,13 @@ env:
   - secure: lWcZ3NAwgP+OboMYs3dEJUAxlihIrs85rOKELmKbezeyIeJpu8pKjbaVLZEiK2LpXHAZ4Gb3u2girxl5ky9uzE0Xf04x1Yqaq6rLFjA0lMKv1qz8CDWegbgWzyRBkG5UIBv2XcpMk5rbQ+PfUK7TFJOqu4xJD9VDxnVGcexd5jcXusOf8/EOlCfSZzP/1uPrK8KKV03vfOl0hlay7IU9Dc1lGB9nD92oOHbmrxvbzr4uaRovxBLEBHRQljwrHXjUBqS0efMoC8bH8Eyp7ZKO2K1LCIEB4WtBCT8lzQ9ZWfbxv2Djii9JiC11ziXQkOnITe/cngq7SRiZ/a+lWI31w5hVunHOvkkfIAPSWArOqOyFy7aF1jlhFcDOx/QWMEOv/+KwzKhbru6XcUjs4DANRf8xKJ8JseFSJAhcTAp1+7YxiVj9KSL8pFIQYyvVdBHoPbEkGd1ouLJftG37EbRVo7dzhWet2A7EGvrzymin6h8dR8cIAYy3MCp9cbTqjuGIAAizgf1XuM9brA8vbYlEoNYcbsbO2b8zwhroM4DLN0uCL6kVOst2+5vWOvtt4cRBZzaoAOKAxjZcPbbk4aT7uttpiEj3lDAyvu4svAWlWmovHqKwak81AtE/bK1LaVMJJl8JOYYjI+YP8hCcoQiFBvh7KgWl5eQZdoTx4QNyyrw=
   - secure: cnH+CikdM7PKxEOJrewXrxEKODv3Q3paE5PF9QYLJh+X8MK9uzjsNY+iL/1nYcwqFwWTuEa7Tu/x52tihFWzWwYfPu3vnqkEnQFtget1vZtsWeB9/9LedG+hdtcTNbJFKnvlJONCOaRLd8szqI4uVtZ0ZQRxqqh5ZLZn4bsmvWiynfmzY8jRFNdJNUOYU41Z41ZYYlhjkJP9Qj/qKJdAPdRqTeKo51zjZfSdPCO2d09VzinIyvOadMDPTd5GO3ovgnsaFcstoZqzi4k3wIQRpzBODDU20CY4z5QWbMlPxoMKG4DEXrF/Xlw8gTkAjq3TNmakd4wHsVsNd20NqbBqcfWYGUAfxTQAEXTIeITGMT8XskfwY8vC/6QYQePykdFjqt3dAe0+/33Jx5wcFYdJIBK31HElww/4J0//SRmk/5vu1Ozm/7NoTGWYTn+GqXUAq2mZ5ihII5kCPIN2mtZi9EmIv0FkmmDt+RaYFjD8f7uP73TZc4V/0J3+CnqC7ut9/scMCAb2kTqH2oUXhUV2djIIdKeHoF6zUsAaRAUmOmN7r1CrM4UtqKa+z/qbbpZKdmCmUwbc8Y7DB4J9KkwR2IlFtDMiPDdeoo16MYfphagX33O6uGoPt1tzNazwn2TUyzcT5knBESc2q570Ap3ON8a5o+XXu/8EkOec58EHYa8=
 install:
-- npm install
-- npm run build
+  - npm install
+  - npm start
 script:
-- nohup npm run start &
-- sleep 3
-- npm run test
-- npm run lint
+  - nohup npm run start &
+  - sleep 3
+  - npm run test
+  - npm run lint
 deploy:
   provider: heroku
   api_key:
