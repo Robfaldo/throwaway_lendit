@@ -8,7 +8,10 @@ const path = require('path');
 // Goes below the app = express (per above link) this code creates the default connection
 // to the database and binds to the error event (so that errors will be printed to the console).
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb://lendit-admin:makers123@ds247001.mlab.com:47001/lendit-dev';
+
+const env = process.env.NODE_ENV || 'lendit-dev';
+// connect to the right database (testing/prod/development)
+var mongoDB = `mongodb://${process.env.DB_USERNAME}:${process.env.DB_Password}@ds247001.mlab.com:47001/${env}`
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;

@@ -6,8 +6,8 @@ const {mongoose, databaseUrl} = require('../../database');
 describe('Model: Item', () => {
   beforeEach(async () => {
     // changed databaseUrl (ie. variable imported at top) to the string
-    await mongoose.connect('mongodb://lendit-admin:makers123@ds247001.mlab.com:47001/lendit-dev');
-    // await mongoose.connection.db.dropDatabase();
+    await mongoose.connect(databaseUrl);
+    await mongoose.connection.db.dropDatabase();
   });
 
   afterEach(async () => {
