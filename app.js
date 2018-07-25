@@ -9,9 +9,18 @@ const path = require('path');
 // to the database and binds to the error event (so that errors will be printed to the console).
 var mongoose = require('mongoose');
 
+const databases = {
+  'lendit-test': 47101,
+  'lendit-prod': 47171,
+  'lendit-dev': 47001
+}
+
 const env = process.env.NODE_ENV || 'lendit-dev';
+console.log("ENV in app.js is")
+console.log(env)
 // connect to the right database (testing/prod/development)
-var mongoDB = `mongodb://${process.env.DB_USERNAME}:${process.env.DB_Password}@ds247001.mlab.com:47001/${env}`
+var mongoDB = `mongodb://${process.env.DB_USERNAME}:${process.env.DB_Password}@ds247001.mlab.com:${databases[env.toString()]}/${env}`
+// var mongoDB = 'mongodb://lendit-admin:makers123@ds247101.mlab.com:47101/lendit-test'
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
