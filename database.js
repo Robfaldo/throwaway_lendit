@@ -14,12 +14,12 @@ const env = process.env.NODE_ENV || 'development';
 const databaseUrl = 'mongodb://lendit-admin:makers123@ds245661.mlab.com:45661/lendit-dev'
 
 // I don't know if this is needed or it's old
-const options= {
-  useMongoClient: true,
-};
+// const options= {
+//   useMongoClient: true,
+// };
 
 module.exports = {
   mongoose,
-  databaseUrl,
-  options,
+  databaseUrl
+  // options,
 };
